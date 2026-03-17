@@ -1,0 +1,181 @@
+{
+  "type": "Collection",
+  "id": "noaacwSARnrcsnpoleDaily",
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/scientific/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v1.1.0/schema.json"
+  ],
+  "title": "Normalized Radar Cross Section, SAR Composite, Near Real-Time, 1km, North Pole, Daily",
+  "description": "This file contains a composite of Synthetic Aperture Radar (SAR) Normalized Radar Cross Section (NRCS) images covering the Arctic for a period of one day. The files are produced in SAROPS (SAR Operational Product System) by the Water Surface Conditions/Sea Surface Roughness group within the NOAA STAR Satellite Oceanography and Climatology Division. Data from the following C-Band SAR systems are included: Sentinel-1A/B, RADARSAT-2, and RADARSAT Constellation Mission. NRCS values have been calibrated with values given by the SAR data provider. Daily coverage may vary due to limitations in data availability.",
+  "license": "Contains modified Copernicus Sentinel data 2026 (https://sentinel.esa.int/documents/247904/690755/Sentinel_Data_Legal_Notice/). Sentinel data is obtained from https://scihub.copernicus.eu/dhus. RADARSAT Constellation Mission Imagery Copyright Government of Canada 2026. RCM data is obtained from https://www.eodms-sgdot.nrcan-rncan.gc.ca/index-en.html. RADARSAT-2 Data and Products Copyright MDA Geospatial Services Inc. 2026 - All Rights Reserved. RADARSAT is an official mark of the Canadian Space Agency. RADARSAT-2 data is provided by https://mda.space/en/. The data may be used and redistributed for free but is not intended for legal use, since it may contain inaccuracies. Neither the data Contributor, ERD, NOAA, nor the United States Government, nor any of their employees or contractors, makes any warranty, express or implied, including warranties of merchantability and fitness for a particular purpose, or assumes any legal liability for the accuracy, completeness, or usefulness, of this information.",
+  "keywords": [
+    "active",
+    "aperture",
+    "arctic",
+    "backscatter",
+    "backwards",
+    "c-sar",
+    "coefficient",
+    "composite",
+    "cross",
+    "cryosphere",
+    "data",
+    "earth",
+    "EARTH REMOTE SENSING INSTRUMENTS > ACTIVE REMOTE SENSING > IMAGING RADARS > C-SAR",
+    "Earth Science > Cryosphere > Sea Ice > Ice Extent",
+    "Earth Science > Spectral/Engineering > Radar > Radar Backscatter",
+    "engineering",
+    "environmental",
+    "extent",
+    "geographic",
+    "GEOGRAPHIC REGION > ARCTIC",
+    "GEOGRAPHIC REGION > NORTHERN HEMISPHERE",
+    "GEOGRAPHIC REGION > POLAR",
+    "hemisphere",
+    "ice",
+    "imaging",
+    "information",
+    "instruments",
+    "level",
+    "national",
+    "nesdis",
+    "noaa",
+    "normalized",
+    "northern",
+    "NRCS",
+    "polar",
+    "radar",
+    "radars",
+    "region",
+    "remote",
+    "sar",
+    "satellite",
+    "scattering",
+    "science",
+    "sea",
+    "section",
+    "sensing",
+    "service",
+    "socd",
+    "spectral",
+    "star",
+    "surface",
+    "surface waves",
+    "surface_backwards_scattering_coefficient_of_radar_wave",
+    "synthetic",
+    "time",
+    "wave",
+    "waves"
+  ],
+  "providers": [
+    {
+      "name": "NOAA/NESDIS/STAR/SOCD",
+      "roles": [
+        "producer",
+        "processor"
+      ],
+      "url": "https://coastwatch.noaa.gov/erddap"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -5498550.0,
+          -5498550.0,
+          5498450.0,
+          5498450.0
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2022-03-05T23:59:59Z",
+          null
+        ]
+      ]
+    }
+  },
+  "summaries": {
+    "platform": [
+      "SENTINEL-1A/B,RADARSAT-2,RADARSAT"
+    ],
+    "instruments": [
+      "C-SAR"
+    ],
+    "proj:epsg": [
+      3413
+    ]
+  },
+  "links": [
+    {
+      "rel": "self",
+      "href": "./collections/noaacwSARnrcsnpoleDaily/collection.json",
+      "type": "application/json",
+      "title": "This collection"
+    },
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "STAC Catalog"
+    },
+    {
+      "rel": "parent",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "STAC Catalog"
+    },
+    {
+      "rel": "about",
+      "href": "https://coastwatch.noaa.gov/erddap/griddap/noaacwSARnrcsnpoleDaily.html",
+      "type": "text/html",
+      "title": "ERDDAP Data Access Form"
+    },
+    {
+      "rel": "describedby",
+      "href": "https://coastwatch.noaa.gov/erddap/info/noaacwSARnrcsnpoleDaily/index.html",
+      "type": "text/html",
+      "title": "ERDDAP Dataset Information"
+    },
+    {
+      "rel": "erddap_endpoint",
+      "href": "https://coastwatch.noaa.gov/erddap/griddap/noaacwSARnrcsnpoleDaily",
+      "type": "text/html",
+      "title": "ERDDAP Data Access Form"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://coastwatch.noaa.gov/erddap/files/noaacwSARnrcsnpoleDaily",
+      "type": "text/html",
+      "title": "HTTPS files directory",
+      "roles": [
+        "data"
+      ],
+      "pw:service_type": "https"
+    }
+  },
+  "item_assets": {
+    "NRCS": {
+      "type": "application/x-netcdf",
+      "title": "Normalized Radar Cross Section",
+      "roles": [
+        "data"
+      ]
+    }
+  },
+  "pw:service_type": "erddap",
+  "pw:conventions": "CF-1.6, ACCD-1.3, COARDS, ACDD-1.3",
+  "pw:naming_authority": "gov.noaa.ncei",
+  "pw:standard_name_vocabulary": "CF Standard Name Table v70",
+  "pw:processing_level": "NOAA Level 2",
+  "pw:resolution_spatial": "1km",
+  "pw:resolution_temporal": "P1D",
+  "pw:license_text": "Contains modified Copernicus Sentinel data 2026 (https://sentinel.esa.int/documents/247904/690755/Sentinel_Data_Legal_Notice/). Sentinel data is obtained from https://scihub.copernicus.eu/dhus. RADARSAT Constellation Mission Imagery Copyright Government of Canada 2026. RCM data is obtained from https://www.eodms-sgdot.nrcan-rncan.gc.ca/index-en.html. RADARSAT-2 Data and Products Copyright MDA Geospatial Services Inc. 2026 - All Rights Reserved. RADARSAT is an official mark of the Canadian Space Agency. RADARSAT-2 data is provided by https://mda.space/en/. The data may be used and redistributed for free but is not intended for legal use, since it may contain inaccuracies. Neither the data Contributor, ERD, NOAA, nor the United States Government, nor any of their employees or contractors, makes any warranty, express or implied, including warranties of merchantability and fitness for a particular purpose, or assumes any legal liability for the accuracy, completeness, or usefulness, of this information.",
+  "pw:creator_name": "NOAA STAR SOCD Water Surface Conditions/SAR Team",
+  "pw:creator_email": "sean.helfrich@noaa.gov,christopher.jackson@noaa.gov,tyler.ruff@noaa.gov",
+  "proj:epsg": 3413
+}

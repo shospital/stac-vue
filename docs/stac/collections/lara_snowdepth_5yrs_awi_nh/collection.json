@@ -1,0 +1,176 @@
+{
+  "type": "Collection",
+  "id": "lara_snowdepth_5yrs_awi_nh",
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/scientific/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v1.1.0/schema.json"
+  ],
+  "title": "LaRA (Laser/Radar Altimeter) snow depth 5-year monthly mean (using AWI/CS-2 standard algorithm), Arctic, 25km, 2018-2023 (winter)",
+  "description": "Laser/Radar Altimeter (LaRA) Arctic Snow Depth (ESA version) is a five-year mean representation of Arctic snow depth on sea ice calculated using complementary observations of Arctic sea ice from laser and radar satellite altimeters.  CryoSat-2 freeboards from the ESA standard algorithm were combined with ICESat-2 freeboards to derive LaRA snow depths over the Arctic Ocean. Monthly mean LaRA snow depths covering winter months (November through April) were averaged over five winters spanning 2018-2023 to create 5-year snow depth means for each winter month. CryoSat-2 Baseline-E L1A/L2 and ICESat-2 ATL07/10 release 6 data were used in development. Sea ice concentration data from the National Snow and Ice Data Center (NSIDC) and sea surface type data from OSI SAF were used as ancillary data.",
+  "license": "proprietary",
+  "keywords": [
+    "algorithms",
+    "altimetry",
+    "Arctic",
+    "EARTH SCIENCE>CLIMATE INDICATORS>CRYOSPHERIC INDICATORS>SNOW DEPTH",
+    "remote sensing",
+    "sea ice",
+    "snow depth"
+  ],
+  "providers": [
+    {
+      "name": "NOAA NESDIS STAR",
+      "roles": [
+        "producer",
+        "processor"
+      ]
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -180,
+          -90,
+          180,
+          90
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2018-01-12T00:00:00+00:00",
+          "2018-12-12T00:00:00+00:00"
+        ]
+      ]
+    }
+  },
+  "summaries": {
+    "platform": [
+      "ICESat-2, CryoSat-2"
+    ],
+    "instruments": [
+      ""
+    ],
+    "proj:epsg": [
+      3413
+    ]
+  },
+  "links": [
+    {
+      "rel": "self",
+      "href": "./collections/lara_snowdepth_5yrs_awi_nh/collection.json",
+      "type": "application/json",
+      "title": "This collection"
+    },
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "STAC Catalog"
+    },
+    {
+      "rel": "parent",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "STAC Catalog"
+    },
+    {
+      "rel": "about",
+      "href": "https://polarwatch.noaa.gov/erddap/griddap/lara_snowdepth_5yrs_awi_nh.html",
+      "type": "text/html",
+      "title": "ERDDAP Data Access Form"
+    },
+    {
+      "rel": "describedby",
+      "href": "https://polarwatch.noaa.gov/erddap/info/lara_snowdepth_5yrs_awi_nh/index.html",
+      "type": "text/html",
+      "title": "ERDDAP Dataset Information"
+    },
+    {
+      "rel": "item",
+      "href": "./lara_snowdepth_5yrs_awi_nh_20180112.json",
+      "type": "application/geo+json",
+      "title": "2018-01-12T00:00:00+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./lara_snowdepth_5yrs_awi_nh_20180212.json",
+      "type": "application/geo+json",
+      "title": "2018-02-12T00:00:00+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./lara_snowdepth_5yrs_awi_nh_20180312.json",
+      "type": "application/geo+json",
+      "title": "2018-03-12T00:00:00+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./lara_snowdepth_5yrs_awi_nh_20180412.json",
+      "type": "application/geo+json",
+      "title": "2018-04-12T00:00:00+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./lara_snowdepth_5yrs_awi_nh_20181112.json",
+      "type": "application/geo+json",
+      "title": "2018-11-12T00:00:00+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./lara_snowdepth_5yrs_awi_nh_20181212.json",
+      "type": "application/geo+json",
+      "title": "2018-12-12T00:00:00+00:00"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://www.star.nesdis.noaa.gov/data/pub0052/polarwatch/erddap/lara_snowdepth_5yrs_awi_nh/",
+      "type": "application/x-netcdf",
+      "title": "HTTPS data directory",
+      "roles": [
+        "data"
+      ],
+      "pw:service_type": "https",
+      "pw:base_url": "https://www.star.nesdis.noaa.gov/data/pub0052/polarwatch/erddap/lara_snowdepth_5yrs_awi_nh/"
+    }
+  },
+  "item_assets": {
+    "LaRA_sd_5yr": {
+      "type": "application/x-netcdf",
+      "title": "LaRA Snow Depth 5yr mean",
+      "roles": [
+        "data"
+      ]
+    },
+    "grid_lat": {
+      "type": "application/x-netcdf",
+      "title": "grid_lat",
+      "roles": [
+        "data"
+      ]
+    },
+    "grid_lon": {
+      "type": "application/x-netcdf",
+      "title": "grid_lon",
+      "roles": [
+        "data"
+      ]
+    }
+  },
+  "pw:service_type": "https",
+  "pw:conventions": "CF-1.6, ACDD-1.3, COARDS",
+  "pw:naming_authority": "",
+  "pw:standard_name_vocabulary": "CF Standard Name Table v70",
+  "pw:processing_level": "NOAA Level 3",
+  "pw:resolution_spatial": "",
+  "pw:resolution_temporal": "P1M",
+  "pw:license_text": "Creative Commons CC0 (CC 1.0)",
+  "pw:creator_name": "NOAA NESDIS STAR",
+  "pw:creator_email": "laurence dot connor@noaa.gov",
+  "proj:epsg": 3413,
+  "proj:proj4": "+proj=stere +lat_0=90 +lat_ts=70 +lon_0=-45 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs +type=crs"
+}
