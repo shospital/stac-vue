@@ -1,0 +1,1384 @@
+{
+  "type": "Collection",
+  "id": "snowfox_miz2_daily",
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/scientific/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v1.1.0/schema.json"
+  ],
+  "title": "X- Experimental Sea Ice Classification, SAR Composite, Near Real-Time, 1km, North Pole, Daily",
+  "description": "This file contains a composite of Synthetic Aperture Radar (SAR) derived sea ice classification covering the Arctic for a period of one day. The files are produced in SAROPS (SAR Operational Product System) by the Water Surface Conditions science team within the NOAA STAR Satellite Oceanography and Climatology Division. Data from the following C-Band SAR systems are included: Sentinel-1, RADARSAT-2, and RADARSAT Constellation Mission. Sea ice classification values represent concentration up to 80%, and greater than 80%. Daily coverage varies depending on SAR acquisitions.",
+  "license": "proprietary",
+  "keywords": [
+    "1km",
+    "active",
+    "aperture",
+    "arctic",
+    "backscatter",
+    "c-sar",
+    "classification",
+    "classified",
+    "composite",
+    "concentration",
+    "cryosphere",
+    "daily",
+    "data",
+    "day",
+    "distribution",
+    "earth",
+    "EARTH REMOTE SENSING INSTRUMENTS > ACTIVE REMOTE SENSING > IMAGING RADARS > C-SAR",
+    "Earth Science > Cryosphere > Sea Ice > Ice Extent",
+    "environmental",
+    "extent",
+    "geographic",
+    "GEOGRAPHIC REGION > ARCTIC",
+    "GEOGRAPHIC REGION > NORTHERN HEMISPHERE",
+    "GEOGRAPHIC REGION > POLAR",
+    "hemisphere",
+    "ice",
+    "ice distribution",
+    "ice_concentration",
+    "imaging",
+    "information",
+    "instruments",
+    "level",
+    "national",
+    "near",
+    "near real time",
+    "nesdis",
+    "noaa",
+    "north",
+    "northern",
+    "polar",
+    "pole",
+    "radar",
+    "radars",
+    "real",
+    "real time",
+    "real-time",
+    "realtime",
+    "region",
+    "remote",
+    "sar",
+    "satellite",
+    "science",
+    "sea",
+    "sensing",
+    "service",
+    "SIC",
+    "socd",
+    "star",
+    "synthetic",
+    "time"
+  ],
+  "providers": [
+    {
+      "name": "NOAA/NESDIS/STAR/SOCD",
+      "roles": [
+        "producer",
+        "processor"
+      ]
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -5498550.0,
+          -5498550.0,
+          5498450.0,
+          5498450.0
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2024-03-01T23:59:59+00:00",
+          "2024-12-07T23:59:59+00:00"
+        ]
+      ]
+    }
+  },
+  "summaries": {
+    "platform": [
+      "SENTINEL-1A/B,RADARSAT-2,RADARSAT CONSTELLATION MISSION"
+    ],
+    "instruments": [
+      "C-SAR"
+    ],
+    "proj:epsg": [
+      3413
+    ]
+  },
+  "links": [
+    {
+      "rel": "self",
+      "href": "./collections/snowfox_miz2_daily/collection.json",
+      "type": "application/json",
+      "title": "This collection"
+    },
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "STAC Catalog"
+    },
+    {
+      "rel": "parent",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "STAC Catalog"
+    },
+    {
+      "rel": "about",
+      "href": "https://polarwatch.noaa.gov/erddap/griddap/snowfox_miz2_daily.html",
+      "type": "text/html",
+      "title": "ERDDAP Data Access Form"
+    },
+    {
+      "rel": "describedby",
+      "href": "https://polarwatch.noaa.gov/erddap/info/snowfox_miz2_daily/index.html",
+      "type": "text/html",
+      "title": "ERDDAP Dataset Information"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240301.json",
+      "type": "application/geo+json",
+      "title": "2024-03-01T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240302.json",
+      "type": "application/geo+json",
+      "title": "2024-03-02T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240303.json",
+      "type": "application/geo+json",
+      "title": "2024-03-03T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240304.json",
+      "type": "application/geo+json",
+      "title": "2024-03-04T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240305.json",
+      "type": "application/geo+json",
+      "title": "2024-03-05T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240306.json",
+      "type": "application/geo+json",
+      "title": "2024-03-06T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240307.json",
+      "type": "application/geo+json",
+      "title": "2024-03-07T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240308.json",
+      "type": "application/geo+json",
+      "title": "2024-03-08T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240309.json",
+      "type": "application/geo+json",
+      "title": "2024-03-09T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240310.json",
+      "type": "application/geo+json",
+      "title": "2024-03-10T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240311.json",
+      "type": "application/geo+json",
+      "title": "2024-03-11T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240312.json",
+      "type": "application/geo+json",
+      "title": "2024-03-12T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240313.json",
+      "type": "application/geo+json",
+      "title": "2024-03-13T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240314.json",
+      "type": "application/geo+json",
+      "title": "2024-03-14T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240315.json",
+      "type": "application/geo+json",
+      "title": "2024-03-15T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240316.json",
+      "type": "application/geo+json",
+      "title": "2024-03-16T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240317.json",
+      "type": "application/geo+json",
+      "title": "2024-03-17T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240417.json",
+      "type": "application/geo+json",
+      "title": "2024-04-17T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240418.json",
+      "type": "application/geo+json",
+      "title": "2024-04-18T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240419.json",
+      "type": "application/geo+json",
+      "title": "2024-04-19T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240420.json",
+      "type": "application/geo+json",
+      "title": "2024-04-20T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240421.json",
+      "type": "application/geo+json",
+      "title": "2024-04-21T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240422.json",
+      "type": "application/geo+json",
+      "title": "2024-04-22T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240423.json",
+      "type": "application/geo+json",
+      "title": "2024-04-23T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240424.json",
+      "type": "application/geo+json",
+      "title": "2024-04-24T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240425.json",
+      "type": "application/geo+json",
+      "title": "2024-04-25T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240426.json",
+      "type": "application/geo+json",
+      "title": "2024-04-26T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240427.json",
+      "type": "application/geo+json",
+      "title": "2024-04-27T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240428.json",
+      "type": "application/geo+json",
+      "title": "2024-04-28T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240429.json",
+      "type": "application/geo+json",
+      "title": "2024-04-29T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240430.json",
+      "type": "application/geo+json",
+      "title": "2024-04-30T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240501.json",
+      "type": "application/geo+json",
+      "title": "2024-05-01T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240502.json",
+      "type": "application/geo+json",
+      "title": "2024-05-02T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240503.json",
+      "type": "application/geo+json",
+      "title": "2024-05-03T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240504.json",
+      "type": "application/geo+json",
+      "title": "2024-05-04T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240505.json",
+      "type": "application/geo+json",
+      "title": "2024-05-05T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240506.json",
+      "type": "application/geo+json",
+      "title": "2024-05-06T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240507.json",
+      "type": "application/geo+json",
+      "title": "2024-05-07T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240508.json",
+      "type": "application/geo+json",
+      "title": "2024-05-08T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240509.json",
+      "type": "application/geo+json",
+      "title": "2024-05-09T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240510.json",
+      "type": "application/geo+json",
+      "title": "2024-05-10T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240511.json",
+      "type": "application/geo+json",
+      "title": "2024-05-11T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240512.json",
+      "type": "application/geo+json",
+      "title": "2024-05-12T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240513.json",
+      "type": "application/geo+json",
+      "title": "2024-05-13T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240514.json",
+      "type": "application/geo+json",
+      "title": "2024-05-14T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240515.json",
+      "type": "application/geo+json",
+      "title": "2024-05-15T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240516.json",
+      "type": "application/geo+json",
+      "title": "2024-05-16T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240517.json",
+      "type": "application/geo+json",
+      "title": "2024-05-17T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240518.json",
+      "type": "application/geo+json",
+      "title": "2024-05-18T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240519.json",
+      "type": "application/geo+json",
+      "title": "2024-05-19T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240520.json",
+      "type": "application/geo+json",
+      "title": "2024-05-20T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240521.json",
+      "type": "application/geo+json",
+      "title": "2024-05-21T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240522.json",
+      "type": "application/geo+json",
+      "title": "2024-05-22T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240523.json",
+      "type": "application/geo+json",
+      "title": "2024-05-23T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240524.json",
+      "type": "application/geo+json",
+      "title": "2024-05-24T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240525.json",
+      "type": "application/geo+json",
+      "title": "2024-05-25T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240526.json",
+      "type": "application/geo+json",
+      "title": "2024-05-26T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240527.json",
+      "type": "application/geo+json",
+      "title": "2024-05-27T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240528.json",
+      "type": "application/geo+json",
+      "title": "2024-05-28T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240529.json",
+      "type": "application/geo+json",
+      "title": "2024-05-29T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240530.json",
+      "type": "application/geo+json",
+      "title": "2024-05-30T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240531.json",
+      "type": "application/geo+json",
+      "title": "2024-05-31T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240601.json",
+      "type": "application/geo+json",
+      "title": "2024-06-01T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240602.json",
+      "type": "application/geo+json",
+      "title": "2024-06-02T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240603.json",
+      "type": "application/geo+json",
+      "title": "2024-06-03T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240604.json",
+      "type": "application/geo+json",
+      "title": "2024-06-04T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240605.json",
+      "type": "application/geo+json",
+      "title": "2024-06-05T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240606.json",
+      "type": "application/geo+json",
+      "title": "2024-06-06T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240607.json",
+      "type": "application/geo+json",
+      "title": "2024-06-07T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240608.json",
+      "type": "application/geo+json",
+      "title": "2024-06-08T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240609.json",
+      "type": "application/geo+json",
+      "title": "2024-06-09T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240610.json",
+      "type": "application/geo+json",
+      "title": "2024-06-10T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240611.json",
+      "type": "application/geo+json",
+      "title": "2024-06-11T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240612.json",
+      "type": "application/geo+json",
+      "title": "2024-06-12T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240613.json",
+      "type": "application/geo+json",
+      "title": "2024-06-13T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240614.json",
+      "type": "application/geo+json",
+      "title": "2024-06-14T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240615.json",
+      "type": "application/geo+json",
+      "title": "2024-06-15T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240616.json",
+      "type": "application/geo+json",
+      "title": "2024-06-16T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240617.json",
+      "type": "application/geo+json",
+      "title": "2024-06-17T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240618.json",
+      "type": "application/geo+json",
+      "title": "2024-06-18T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240619.json",
+      "type": "application/geo+json",
+      "title": "2024-06-19T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240620.json",
+      "type": "application/geo+json",
+      "title": "2024-06-20T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240621.json",
+      "type": "application/geo+json",
+      "title": "2024-06-21T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240622.json",
+      "type": "application/geo+json",
+      "title": "2024-06-22T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240623.json",
+      "type": "application/geo+json",
+      "title": "2024-06-23T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240625.json",
+      "type": "application/geo+json",
+      "title": "2024-06-25T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240626.json",
+      "type": "application/geo+json",
+      "title": "2024-06-26T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240627.json",
+      "type": "application/geo+json",
+      "title": "2024-06-27T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240628.json",
+      "type": "application/geo+json",
+      "title": "2024-06-28T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240629.json",
+      "type": "application/geo+json",
+      "title": "2024-06-29T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240630.json",
+      "type": "application/geo+json",
+      "title": "2024-06-30T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240701.json",
+      "type": "application/geo+json",
+      "title": "2024-07-01T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240702.json",
+      "type": "application/geo+json",
+      "title": "2024-07-02T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240703.json",
+      "type": "application/geo+json",
+      "title": "2024-07-03T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240705.json",
+      "type": "application/geo+json",
+      "title": "2024-07-05T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240706.json",
+      "type": "application/geo+json",
+      "title": "2024-07-06T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240707.json",
+      "type": "application/geo+json",
+      "title": "2024-07-07T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240708.json",
+      "type": "application/geo+json",
+      "title": "2024-07-08T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240709.json",
+      "type": "application/geo+json",
+      "title": "2024-07-09T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240710.json",
+      "type": "application/geo+json",
+      "title": "2024-07-10T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240711.json",
+      "type": "application/geo+json",
+      "title": "2024-07-11T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240712.json",
+      "type": "application/geo+json",
+      "title": "2024-07-12T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240713.json",
+      "type": "application/geo+json",
+      "title": "2024-07-13T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240714.json",
+      "type": "application/geo+json",
+      "title": "2024-07-14T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240715.json",
+      "type": "application/geo+json",
+      "title": "2024-07-15T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240716.json",
+      "type": "application/geo+json",
+      "title": "2024-07-16T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240717.json",
+      "type": "application/geo+json",
+      "title": "2024-07-17T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240718.json",
+      "type": "application/geo+json",
+      "title": "2024-07-18T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240719.json",
+      "type": "application/geo+json",
+      "title": "2024-07-19T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240720.json",
+      "type": "application/geo+json",
+      "title": "2024-07-20T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240721.json",
+      "type": "application/geo+json",
+      "title": "2024-07-21T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240722.json",
+      "type": "application/geo+json",
+      "title": "2024-07-22T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240723.json",
+      "type": "application/geo+json",
+      "title": "2024-07-23T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240724.json",
+      "type": "application/geo+json",
+      "title": "2024-07-24T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240725.json",
+      "type": "application/geo+json",
+      "title": "2024-07-25T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240726.json",
+      "type": "application/geo+json",
+      "title": "2024-07-26T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240727.json",
+      "type": "application/geo+json",
+      "title": "2024-07-27T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240728.json",
+      "type": "application/geo+json",
+      "title": "2024-07-28T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240729.json",
+      "type": "application/geo+json",
+      "title": "2024-07-29T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240730.json",
+      "type": "application/geo+json",
+      "title": "2024-07-30T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240731.json",
+      "type": "application/geo+json",
+      "title": "2024-07-31T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240801.json",
+      "type": "application/geo+json",
+      "title": "2024-08-01T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240802.json",
+      "type": "application/geo+json",
+      "title": "2024-08-02T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240803.json",
+      "type": "application/geo+json",
+      "title": "2024-08-03T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240804.json",
+      "type": "application/geo+json",
+      "title": "2024-08-04T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240805.json",
+      "type": "application/geo+json",
+      "title": "2024-08-05T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240806.json",
+      "type": "application/geo+json",
+      "title": "2024-08-06T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240807.json",
+      "type": "application/geo+json",
+      "title": "2024-08-07T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240808.json",
+      "type": "application/geo+json",
+      "title": "2024-08-08T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240809.json",
+      "type": "application/geo+json",
+      "title": "2024-08-09T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240810.json",
+      "type": "application/geo+json",
+      "title": "2024-08-10T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240811.json",
+      "type": "application/geo+json",
+      "title": "2024-08-11T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240812.json",
+      "type": "application/geo+json",
+      "title": "2024-08-12T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240813.json",
+      "type": "application/geo+json",
+      "title": "2024-08-13T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240814.json",
+      "type": "application/geo+json",
+      "title": "2024-08-14T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240815.json",
+      "type": "application/geo+json",
+      "title": "2024-08-15T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240817.json",
+      "type": "application/geo+json",
+      "title": "2024-08-17T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240818.json",
+      "type": "application/geo+json",
+      "title": "2024-08-18T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240819.json",
+      "type": "application/geo+json",
+      "title": "2024-08-19T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240820.json",
+      "type": "application/geo+json",
+      "title": "2024-08-20T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240821.json",
+      "type": "application/geo+json",
+      "title": "2024-08-21T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240822.json",
+      "type": "application/geo+json",
+      "title": "2024-08-22T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240823.json",
+      "type": "application/geo+json",
+      "title": "2024-08-23T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240824.json",
+      "type": "application/geo+json",
+      "title": "2024-08-24T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240825.json",
+      "type": "application/geo+json",
+      "title": "2024-08-25T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240826.json",
+      "type": "application/geo+json",
+      "title": "2024-08-26T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240827.json",
+      "type": "application/geo+json",
+      "title": "2024-08-27T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240828.json",
+      "type": "application/geo+json",
+      "title": "2024-08-28T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240829.json",
+      "type": "application/geo+json",
+      "title": "2024-08-29T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240830.json",
+      "type": "application/geo+json",
+      "title": "2024-08-30T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240831.json",
+      "type": "application/geo+json",
+      "title": "2024-08-31T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240901.json",
+      "type": "application/geo+json",
+      "title": "2024-09-01T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240902.json",
+      "type": "application/geo+json",
+      "title": "2024-09-02T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240903.json",
+      "type": "application/geo+json",
+      "title": "2024-09-03T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240904.json",
+      "type": "application/geo+json",
+      "title": "2024-09-04T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240905.json",
+      "type": "application/geo+json",
+      "title": "2024-09-05T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240906.json",
+      "type": "application/geo+json",
+      "title": "2024-09-06T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240907.json",
+      "type": "application/geo+json",
+      "title": "2024-09-07T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240908.json",
+      "type": "application/geo+json",
+      "title": "2024-09-08T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240912.json",
+      "type": "application/geo+json",
+      "title": "2024-09-12T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240915.json",
+      "type": "application/geo+json",
+      "title": "2024-09-15T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240916.json",
+      "type": "application/geo+json",
+      "title": "2024-09-16T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240918.json",
+      "type": "application/geo+json",
+      "title": "2024-09-18T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240919.json",
+      "type": "application/geo+json",
+      "title": "2024-09-19T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240920.json",
+      "type": "application/geo+json",
+      "title": "2024-09-20T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240921.json",
+      "type": "application/geo+json",
+      "title": "2024-09-21T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240922.json",
+      "type": "application/geo+json",
+      "title": "2024-09-22T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240923.json",
+      "type": "application/geo+json",
+      "title": "2024-09-23T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240924.json",
+      "type": "application/geo+json",
+      "title": "2024-09-24T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240925.json",
+      "type": "application/geo+json",
+      "title": "2024-09-25T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240926.json",
+      "type": "application/geo+json",
+      "title": "2024-09-26T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240927.json",
+      "type": "application/geo+json",
+      "title": "2024-09-27T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240928.json",
+      "type": "application/geo+json",
+      "title": "2024-09-28T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240929.json",
+      "type": "application/geo+json",
+      "title": "2024-09-29T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20240930.json",
+      "type": "application/geo+json",
+      "title": "2024-09-30T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20241001.json",
+      "type": "application/geo+json",
+      "title": "2024-10-01T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20241002.json",
+      "type": "application/geo+json",
+      "title": "2024-10-02T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20241003.json",
+      "type": "application/geo+json",
+      "title": "2024-10-03T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20241004.json",
+      "type": "application/geo+json",
+      "title": "2024-10-04T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20241005.json",
+      "type": "application/geo+json",
+      "title": "2024-10-05T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20241006.json",
+      "type": "application/geo+json",
+      "title": "2024-10-06T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20241007.json",
+      "type": "application/geo+json",
+      "title": "2024-10-07T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20241008.json",
+      "type": "application/geo+json",
+      "title": "2024-10-08T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20241009.json",
+      "type": "application/geo+json",
+      "title": "2024-10-09T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20241010.json",
+      "type": "application/geo+json",
+      "title": "2024-10-10T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20241011.json",
+      "type": "application/geo+json",
+      "title": "2024-10-11T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20241012.json",
+      "type": "application/geo+json",
+      "title": "2024-10-12T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20241013.json",
+      "type": "application/geo+json",
+      "title": "2024-10-13T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20241014.json",
+      "type": "application/geo+json",
+      "title": "2024-10-14T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20241015.json",
+      "type": "application/geo+json",
+      "title": "2024-10-15T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20241016.json",
+      "type": "application/geo+json",
+      "title": "2024-10-16T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20241017.json",
+      "type": "application/geo+json",
+      "title": "2024-10-17T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20241018.json",
+      "type": "application/geo+json",
+      "title": "2024-10-18T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20241019.json",
+      "type": "application/geo+json",
+      "title": "2024-10-19T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20241020.json",
+      "type": "application/geo+json",
+      "title": "2024-10-20T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20241021.json",
+      "type": "application/geo+json",
+      "title": "2024-10-21T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20241022.json",
+      "type": "application/geo+json",
+      "title": "2024-10-22T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20241023.json",
+      "type": "application/geo+json",
+      "title": "2024-10-23T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20241024.json",
+      "type": "application/geo+json",
+      "title": "2024-10-24T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20241025.json",
+      "type": "application/geo+json",
+      "title": "2024-10-25T23:59:59+00:00"
+    },
+    {
+      "rel": "item",
+      "href": "./snowfox_miz2_daily_20241207.json",
+      "type": "application/geo+json",
+      "title": "2024-12-07T23:59:59+00:00"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://www.star.nesdis.noaa.gov/data/pub0052/polarwatch/erddap/snowfox_miz2_daily/",
+      "type": "application/x-netcdf",
+      "title": "HTTPS data directory",
+      "roles": [
+        "data"
+      ],
+      "pw:service_type": "https",
+      "pw:base_url": "https://www.star.nesdis.noaa.gov/data/pub0052/polarwatch/erddap/snowfox_miz2_daily/"
+    }
+  },
+  "item_assets": {
+    "SIC": {
+      "type": "application/x-netcdf",
+      "title": "Classified sea ice concentration",
+      "roles": [
+        "data"
+      ]
+    }
+  },
+  "pw:service_type": "https",
+  "pw:conventions": "CF-1.6, ACCD-1.3, COARDS, ACDD-1.3",
+  "pw:naming_authority": "gov.noaa.ncei",
+  "pw:standard_name_vocabulary": "CF Standard Name Table v70",
+  "pw:processing_level": "NOAA Level 2",
+  "pw:resolution_spatial": "1km",
+  "pw:resolution_temporal": "P1D",
+  "pw:license_text": "Contains modified Copernicus Sentinel data 2024 (https://sentinel.esa.int/documents/247904/690755/Sentinel_Data_Legal_Notice/). Sentinel data is obtained from https://scihub.copernicus.eu/dhus. RADARSAT Constellation Mission Imagery Copyright Government of Canada 2024. RCM data is obtained from https://www.eodms-sgdot.nrcan-rncan.gc.ca/index-en.html. RADARSAT-2 Data and Products Copyright MDA Geospatial Services Inc. 2024 - All Rights Reserved. RADARSAT is an official mark of the Canadian Space Agency. RADARSAT-2 data is provided by https://mda.space/en/. The data may be used and redistributed for free but is not intended for legal use, since it may contain inaccuracies. Neither the data Contributor, ERD, NOAA, nor the United States Government, nor any of their employees or contractors, makes any warranty, express or implied, including warranties of merchantability and fitness for a particular purpose, or assumes any legal liability for the accuracy, completeness, or usefulness, of this information.",
+  "pw:creator_name": "NOAA STAR SOCD Water Surface Conditions",
+  "pw:creator_email": "christopher.jackson@noaa.gov",
+  "proj:epsg": 3413
+}
