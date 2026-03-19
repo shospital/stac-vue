@@ -2,15 +2,21 @@ name: Build and Deploy
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
+
+permissions:
+  contents: write
 
 jobs:
   build:
+    if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -24,7 +30,7 @@ jobs:
         run: npm run build
 
       - name: Rename dist to docs
-        run: mv dist docs
+        run: rm -rf docs && mv dist docs
 
       - name: Commit & push
         run: |
@@ -33,5 +39,3 @@ jobs:
           git add -A
           git commit -m "Automated update" || exit 0
           git push origin HEAD:main
-
-
