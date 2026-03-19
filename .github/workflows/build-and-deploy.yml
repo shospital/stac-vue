@@ -27,9 +27,13 @@ jobs:
         run: mv dist docs
 
       - name: Commit and push changes
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add docs
           git commit -m "Build and deploy: rename dist to docs" || echo "No changes to commit"
-          git push
+          git push https://x-access-token:${GH_PAT}@github.com/shospital/stac-vue.git HEAD:main
+
+
