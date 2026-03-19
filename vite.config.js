@@ -115,6 +115,7 @@ export default defineConfig({
         main: resolve(__dirname, 'index.html'),
         stac: resolve(__dirname, 'stac.html'),
         learn: resolve(__dirname, 'learn.html'),
+        applications: resolve(__dirname, 'applications.html'),
       },
     },
   },
