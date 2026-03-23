@@ -152,6 +152,20 @@
         return !/^javascript:/i.test(value)
       }
 
+      function isMarkedExternal(url, explicitExternal = false) {
+        return explicitExternal === true
+      }
+
+      function renderOpenLinkMarkup(href, explicitExternal = false) {
+        if (!href) return 'n/a'
+
+        const externalLabel = isMarkedExternal(href, explicitExternal)
+          ? ' <span class="dataset-id">(external)</span>'
+          : ''
+
+        return `<a href="${href}" target="_blank" rel="noreferrer">Open</a>${externalLabel}<div class="dataset-id">${href}</div>`
+      }
+
       function resolveRelativeUrl(baseUrl, href) {
         if (!href) return ''
 
@@ -560,33 +574,48 @@
 
       function extractDataAccessForm(collection) {
         const links = collection.links || []
-        const preferredRels = ['about', 'data', 'via', 'alternate']
-        const accessLink = links.find(
-          (link) => preferredRels.includes(link.rel) && typeof link.href === 'string' && link.href.length > 0,
+        const serviceLink = links.find(
+          (link) => link.rel === 'service' && typeof link.href === 'string' && link.href.length > 0,
         )
+        return serviceLink?.href || ''
+      }
 
-        if (accessLink?.href) {
-          return accessLink.href
+      function extractDataAccessExternal(collection) {
+        const links = collection.links || []
+        const serviceLink = links.find(
+          (link) => link.rel === 'service' && typeof link.href === 'string' && link.href.length > 0,
+        )
+        return serviceLink?.external === true
+      }
+
+      function extractAssetsFilesAsset(collection) {
+        const fromAssetsObject = collection?.assets?.files
+        if (fromAssetsObject && typeof fromAssetsObject === 'object') {
+          return fromAssetsObject
         }
 
-        const dataAsset = Object.values(collection.assets || {}).find((asset) => {
-          if (typeof asset?.href !== 'string' || asset.href.length === 0) {
-            return false
-          }
+        const fromColonField = collection?.['assets:files']
+        if (fromColonField && typeof fromColonField === 'object') {
+          return fromColonField
+        }
 
+        const fromDataAsset = collection?.assets?.data
+        if (fromDataAsset && typeof fromDataAsset === 'object') {
+          return fromDataAsset
+        }
+
+        const assets = Object.values(collection?.assets || {})
+        const roleBasedDataAsset = assets.find((asset) => {
+          if (!asset || typeof asset !== 'object') return false
+          if (typeof asset.href !== 'string' || asset.href.length === 0) return false
           const roles = Array.isArray(asset.roles) ? asset.roles : []
-          const type = `${asset.type || ''}`.toLowerCase()
-          const title = `${asset.title || ''}`.toLowerCase()
-
-          return roles.includes('data') || type.includes('netcdf') || type.includes('hdf') || title.includes('data')
+          return roles.includes('data')
         })
-
-        if (dataAsset?.href) {
-          return dataAsset.href
+        if (roleBasedDataAsset) {
+          return roleBasedDataAsset
         }
 
-        const htmlAsset = Object.values(collection.assets || {}).find((asset) => asset?.type === 'text/html' && asset?.href)
-        return htmlAsset?.href || ''
+        return null
       }
 
       function extractErddapDataFormLink(collection) {
@@ -603,13 +632,17 @@
       }
 
       function extractHttpsDataFilesLink(collection) {
-        const links = collection?.links || []
-        const httpsLink = links.find((link) => link.rel === 'https' && typeof link.href === 'string' && link.href.length > 0)
-        if (httpsLink?.href) {
-          return httpsLink.href
+        const filesAsset = extractAssetsFilesAsset(collection)
+        if (typeof filesAsset?.href === 'string' && filesAsset.href.length > 0) {
+          return filesAsset.href
         }
 
-        return extractPrimaryDataAssetHref(collection)
+        return ''
+      }
+
+      function extractHttpsDataFilesExternal(collection) {
+        const filesAsset = extractAssetsFilesAsset(collection)
+        return filesAsset?.external === true
       }
 
       function extractPrimaryDataAssetHref(collection) {
@@ -776,36 +809,15 @@
               .join('')}</ul>`
           : '<p>n/a</p>'
 
-        const dataAccessPrimaryMarkup = selected.dataAccessForm
-          ? `<a href="${selected.dataAccessForm}" target="_blank" rel="noreferrer">Open</a><div class="dataset-id">${selected.dataAccessForm}</div>`
-          : ''
-
-        const dataAccessMarkup = (() => {
-          const blocks = []
-
-          if (dataAccessPrimaryMarkup) {
-            blocks.push(`<div class="mb-2">${dataAccessPrimaryMarkup}</div>`)
-          }
-
-          if (blocks.length === 0) {
-            return 'n/a'
-          }
-
-          return blocks.join('')
-        })()
-
+        const httpsDatafileMarkup = renderOpenLinkMarkup(selected.httpsDataFilesLink, selected.httpsDataFilesExternal)
+        const dataAccessMarkup = renderOpenLinkMarkup(selected.dataAccessForm, selected.dataAccessExternal)
         const isErddapService = `${selected.serviceType || ''}`.toLowerCase() === 'erddap'
-        const erddapDataDirectoryMarkup = selected.erddapDirectoryLink
-          ? `<a href="${selected.erddapDirectoryLink}" target="_blank" rel="noreferrer">Open</a><div class="dataset-id">${selected.erddapDirectoryLink}</div>`
-          : 'n/a'
-        const httpsDatafileMarkup = selected.httpsDataFilesLink
-          ? `<a href="${selected.httpsDataFilesLink}" target="_blank" rel="noreferrer">Open</a><div class="dataset-id">${selected.httpsDataFilesLink}</div>`
-          : 'n/a'
+        const hasItemSources = selected.itemsLink || (Array.isArray(selected.itemLinks) && selected.itemLinks.length > 0)
         const dataAccessControlMarkup = isErddapService
-          ? erddapDataDirectoryMarkup
-          : selected.itemsLink || (Array.isArray(selected.itemLinks) && selected.itemLinks.length > 0)
-            ? '<button id="openItemsBtn" class="btn btn-outline-primary btn-sm ms-2">Open Data Access</button>'
-            : 'n/a'
+          ? dataAccessMarkup
+          : hasItemSources
+            ? '<button id="openItemsBtn" class="btn btn-outline-primary btn-sm ms-2">Open Data File Downloads</button>'
+            : dataAccessMarkup
 
         detailsPanel.innerHTML = `
           <div class="panel-header"><h3 class="mb-0">${selected.title}</h3></div>
@@ -822,12 +834,12 @@
           <p><strong>proj:epsg:</strong> ${selected.projEpsg || 'n/a'}</p>
           <p><strong>proj:proj4:</strong> ${selected.projProj4 || 'n/a'}</p>
 
-          <p><strong>HTTPS Datafile:</strong> ${httpsDatafileMarkup}</p>
+          <p><strong>Data Files:</strong> ${httpsDatafileMarkup}</p>
 
           <p>
             <strong>Data Access:</strong>
             ${dataAccessControlMarkup}
-            ${!isErddapService && (selected.itemsLink || (Array.isArray(selected.itemLinks) && selected.itemLinks.length > 0)) && state.itemsByDatasetId[selected.id] ? `<span class="items-summary ms-2">${state.itemsByDatasetId[selected.id].length} assets, ${state.itemsByDatasetId[selected.id].filter((asset) => asset.isNetcdf).length} netCDF</span>` : ''}
+            ${!isErddapService && hasItemSources && state.itemsByDatasetId[selected.id] ? `<span class="items-summary ms-2">${state.itemsByDatasetId[selected.id].length} assets, ${state.itemsByDatasetId[selected.id].filter((asset) => asset.isNetcdf).length} netCDF</span>` : ''}
           </p>
 
 
@@ -921,8 +933,10 @@
                   bbox: extractBbox(collection),
                   providers: collection.providers || [],
                   dataAccessForm: extractDataAccessForm(collection),
+                  dataAccessExternal: extractDataAccessExternal(collection),
                   erddapDirectoryLink: extractErddapDataFormLink(collection),
                   httpsDataFilesLink: extractHttpsDataFilesLink(collection),
+                  httpsDataFilesExternal: extractHttpsDataFilesExternal(collection),
                   datasetInformation: extractDatasetInformation(collection),
                   itemsLink: extractItemsLink(collection),
                   itemLinks: extractItemLinks(collection),
@@ -943,8 +957,10 @@
                   bbox: null,
                   providers: [],
                   dataAccessForm: '',
+                  dataAccessExternal: false,
                   erddapDirectoryLink: '',
                   httpsDataFilesLink: '',
+                  httpsDataFilesExternal: false,
                   datasetInformation: '',
                   itemsLink: '',
                   itemLinks: [],
