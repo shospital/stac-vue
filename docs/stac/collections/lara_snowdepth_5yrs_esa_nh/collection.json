@@ -127,7 +127,7 @@
     }
   ],
   "assets": {
-    "data": {
+    "files": {
       "href": "https://www.star.nesdis.noaa.gov/data/pub0052/polarwatch/erddap/lara_snowdepth_5yrs_esa_nh/",
       "type": "application/x-netcdf",
       "title": "HTTPS data directory",
@@ -135,6 +135,7 @@
         "data"
       ],
       "pw:service_type": "https",
+      "external": true,
       "pw:base_url": "https://www.star.nesdis.noaa.gov/data/pub0052/polarwatch/erddap/lara_snowdepth_5yrs_esa_nh/"
     }
   },

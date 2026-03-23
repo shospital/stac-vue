@@ -2,7 +2,7 @@
   "type": "Catalog",
   "id": "polarwatch-stac",
   "stac_version": "1.0.0",
-  "title": "PolarWatch Data Catalog",
+  "title": "PolarWatch STAC Catalog",
   "description": "STAC catalog for PolarWatch datasets. Collections are served via ERDDAP or HTTPS.",
   "links": [
     {

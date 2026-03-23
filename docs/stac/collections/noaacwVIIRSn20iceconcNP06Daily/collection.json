@@ -86,17 +86,19 @@
       "title": "ERDDAP Dataset Information"
     },
     {
-      "rel": "erddap_endpoint",
+      "rel": "service",
       "href": "https://coastwatch.noaa.gov/erddap/griddap/noaacwVIIRSn20iceconcNP06Daily",
       "type": "text/html",
+      "external": false,
       "title": "ERDDAP Data Access Form"
     }
   ],
   "assets": {
-    "data": {
+    "files": {
       "href": "https://coastwatch.noaa.gov/erddap/files/noaacwVIIRSn20iceconcNP06Daily",
       "type": "text/html",
       "title": "HTTPS files directory",
+      "external": false,
       "roles": [
         "data"
       ],
