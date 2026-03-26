@@ -22,11 +22,6 @@ npm run dev
 
 Open `http://localhost:5173`.
 
-## Project Structure
-```
-polarwatch/
-
-```
 
 ## What it edits
 
