@@ -8,11 +8,6 @@ This git repository is set up so that any changes to the main branch will trigge
 
 To host the website, copy all contents of the `dist/` directory to the web server.
 
-# PolarWatch STAC Vue Editor
-
-Vue + Vite app for editing STAC JSON files in the  folder `../stac`.
-**Notes** This is for developers to build the Vue application
-
 ## Run
 
 ```bash
